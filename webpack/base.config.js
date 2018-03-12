@@ -1,12 +1,15 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack')
 
 const { root } = require('./utils')
 
 module.exports = function () {
   return {
     target: 'web',
+    context: root(),
     entry: root(path.join('src', 'index.js')),
     output: {
       filename: '[name].[chunkhash].js',
@@ -72,11 +75,24 @@ module.exports = function () {
       ],
     },
     plugins: [
+      new ExtractTextPlugin({
+        filename: '[name].[contenthash].css',
+      }),
       new HtmlWebpackPlugin({
         template: root(path.join('src', 'index.html')),
         inject: 'body',
       }),
-      new FaviconsWebpackPlugin(root('favicon.ico'))
+      new CopyWebpackPlugin(
+        [
+          {
+            from: root('public/**/*'),
+            to: root('dist/')
+          }
+        ],
+        {
+          context: root()
+        },
+      ),
     ],
   }
 }
