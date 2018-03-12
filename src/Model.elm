@@ -1,5 +1,10 @@
-module Model exposing (Model)
+module Model exposing (Model, initialModel)
 
 type alias Model =
+  {
+  }
+
+initialModel : Model
+initialModel =
   {
   }

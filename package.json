@@ -18,7 +18,7 @@
   "devDependencies": {
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.10",
-    "elm-webpack-loader": "^4.4.0",
+    "elm-webpack-loader": "git://github.com/elm-community/elm-webpack-loader#7d1c6d939ea5b8b8a8f2aa2eb497e7fba49e6c71",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.0.6",
     "node-sass": "^4.7.2",
