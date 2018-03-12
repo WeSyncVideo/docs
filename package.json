@@ -1,0 +1,26 @@
+{
+  "name": "ease-web",
+  "version": "0.0.1",
+  "description": "Web client for WeSync video platform",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Right2Drive/wesync-web"
+  },
+  "author": {
+    "name": "Brad Pfannmuller"
+  },
+  "scripts": {
+    "start": "",
+    "prod": "",
+    "test": "yarn standard"
+  },
+  "devDependencies": {
+    "elm-webpack-loader": "^4.4.0",
+    "standard": "^11.0.0",
+    "standard-loader": "^6.0.1",
+    "webpack": "^4.1.1"
+  },
+  "peerDependencies": {
+    "elm": "^0.18.0"
+  }
+}
