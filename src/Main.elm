@@ -6,6 +6,7 @@ import Model exposing (Model, initialModel)
 import Messages exposing (Msg)
 import Update exposing (update)
 import Subscriptions exposing (subscriptions)
+import View.Landing exposing (view)
 
 
 main : Program Never Model Msg
@@ -17,16 +18,3 @@ main =
         , subscriptions = subscriptions
     }
 
-
--- SUBSCRIPTIONS
-
-
-
-
--- VIEW
-
-view : Model -> Html Msg
-view model =
-    div []
-        [ text "WeSync Web Client!!"
-        ]
