@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const webpack = require('webpack')
 
 const { root } = require('./utils')
@@ -75,6 +76,9 @@ module.exports = function () {
       ],
     },
     plugins: [
+      new CleanWebpackPlugin(['dist'], {
+        root: root()
+      }),
       new ExtractTextPlugin({
         filename: '[name].[contenthash].css',
       }),
@@ -86,7 +90,8 @@ module.exports = function () {
         [
           {
             from: root('public/**/*'),
-            to: root('dist/')
+            to: root('dist/'),
+            flatten: true,
           }
         ],
         {

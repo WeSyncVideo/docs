@@ -16,6 +16,7 @@
     "test": "yarn standard"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.10",
     "elm-webpack-loader": "git://github.com/elm-community/elm-webpack-loader#7d1c6d939ea5b8b8a8f2aa2eb497e7fba49e6c71",

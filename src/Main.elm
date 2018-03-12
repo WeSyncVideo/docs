@@ -28,5 +28,5 @@ main =
 view : Model -> Html Msg
 view model =
     div []
-        [ text "New Html Program"
+        [ text "WeSync Web Client!!"
         ]
