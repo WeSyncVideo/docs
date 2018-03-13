@@ -2,11 +2,12 @@ module Main exposing (main)
 
 
 import Html exposing (..)
-import Model exposing (Model, initialModel)
+import Model exposing (Model)
+import Init exposing (initialModel)
 import Messages exposing (Msg)
 import Update exposing (update)
 import Subscriptions exposing (subscriptions)
-import View.Landing exposing (view)
+import View.Navigator exposing (view)
 
 
 main : Program Never Model Msg
@@ -17,4 +18,3 @@ main =
         , update = update
         , subscriptions = subscriptions
     }
-

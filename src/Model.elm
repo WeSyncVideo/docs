@@ -1,13 +1,10 @@
-module Model exposing (Model, initialModel)
-
-import Messages exposing (Msg)
+module Model exposing (Model, Route(..))
 
 type alias Model =
-  {
+  { route : Route
   }
 
-initialModel : (Model, Cmd Msg)
-initialModel =
-  ( {}
-  , Cmd.none
-  )
+type Route
+  = LandingRoute
+  | VideoRoute
+  | NotFoundRoute

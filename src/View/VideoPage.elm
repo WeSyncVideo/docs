@@ -1,4 +1,4 @@
-module View.Landing exposing (view)
+module View.VideoPage exposing (videoView)
 
 
 import Html exposing (Html, div, text)
@@ -6,8 +6,8 @@ import Model exposing (Model)
 import Messages exposing (Msg)
 
 
-view : Model -> Html Msg
-view model =
+videoView : Model -> Html Msg
+videoView model =
     div []
-        [ text "WeSync Web Client!! Yay"
+        [ text "Video Page!!"
         ]

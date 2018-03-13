@@ -7,5 +7,5 @@ import Model exposing (Model)
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
     case msg of
-        ReplaceMe ->
-            (model, Cmd.none)
+        Navigate route ->
+            ( { model | route = route }, Cmd.none)
