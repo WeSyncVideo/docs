@@ -1,0 +1,38 @@
+#landing {
+  display: flex;
+  flex-direction: row;
+
+  .action {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: #212121;
+    transition: background-color 0.5s ease;
+
+    .hidden-field {
+      @include transparent;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      background-color: #606060;
+
+      .hidden-field {
+        @include opaque;
+      }
+    }
+  }
+
+  .host {
+
+  }
+
+  .watch {
+
+
+  }
+}

@@ -1,0 +1,7 @@
+@mixin transparent {
+  opacity: 0;
+}
+
+@mixin opaque {
+  opacity: 1;
+}
